@@ -43,7 +43,7 @@ class BaseModel:
         """
 
         the_class_name = self.__class__.__name__
-        return f"[{self._class_._name_}] ({self.id}) {self.__dict__}"
+        return f"[{the_class_name}] ({self.id}) {self.__dict__}"
 
     def save(self):
         """ Updates the updated_at """
@@ -57,8 +57,8 @@ class BaseModel:
         - dict: A dictionary
         """
 
-        dict_copy = self._dict_.copy()
-        dict_copy['_class'] = self.class.name_
+        dict_copy = self.__dict__.copy()
+        dict_copy['__class__'] = self.__class__.__name__
         dict_copy['created_at'] = self.created_at.isoformat()
         dict_copy['updated_at'] = self.updated_at.isoformat()
 

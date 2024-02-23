@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-from uuid import uuid4
+import uuid
 from datetime import datetime
 
 
@@ -31,7 +31,7 @@ class BaseModel:
                 else:
                     setattr(self, key, value)
         else:
-            self.id = str(uuid4())
+            self.id = str(uuid.uuid4())
             self.created_at = datetime.now()
             self.updated_at = datetime.now()
 
@@ -62,4 +62,4 @@ class BaseModel:
         dict_copy['created_at'] = self.created_at.isoformat()
         dict_copy['updated_at'] = self.updated_at.isoformat()
 
-        return my_dict
+        return dict_copy

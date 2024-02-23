@@ -30,6 +30,6 @@ class BaseModel:
     def to_dict(self):
         dict_copy = self.__dict__.copy()
         dict_copy["__class__"] = self.__class__.__name__
-        dict_copy["created_at"] = datetime.strptime(self.created_at, "%Y-%m-%dT%H:%M:%S.%f")
-        dict_copy["updated_at"] = datetime.strptime(self.updated_at, "%Y-%m-%dT%H:%M:%S.%f")
+        dict_copy["created_at"] = self.created_at.isoformat()
+        dict_copy["updated_at"] = self.updated_at.isoformat()
         return dict_copy

@@ -1,16 +1,22 @@
 #!/usr/bin/python3
+"""Defines the FileStorage class."""
 import json
-import os
+from models.base_model import BaseModel
+from models.user import User
+from models.state import State
+from models.city import City
+from models.place import Place
+from models.amenity import Amenity
+from models.review import Review
 
 
 class FileStorage:
     """ The FileStorage class for serialization and deserialization
 
     Attributes:
-    - __file_path (str): The path to the JSON file
-    - __objects (dict): A dictionary to store instances
+        __file_path (str): The path to the JSON file
+        __objects (dict): A dictionary to store instances
     """
-
     __file_path = "file.json"
     __objects = {}
 
@@ -18,7 +24,7 @@ class FileStorage:
         """ Return dictionary
 
         Returns:
-        - dict: The dictionary of all instances.
+            dict: The dictionary of all instances.
         """
         return self.__objects
 

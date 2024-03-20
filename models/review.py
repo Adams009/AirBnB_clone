@@ -1,15 +1,19 @@
 #!/usr/bin/python3
-"""The Review class."""
+"""Module base_model
+
+The Module Review Class
+"""
+
 from models.base_model import BaseModel
 
 
 class Review(BaseModel):
-    """create a review.
+    """A class of review
 
     Attributes:
-        place_id (str): place id
+        place_id (str): Place id.
         user_id (str): User id.
-        text (str): text of review.
+        text (str): The text
     """
 
     place_id = ""

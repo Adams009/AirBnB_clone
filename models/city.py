@@ -1,14 +1,18 @@
 #!/usr/bin/python3
-"""The city class."""
+"""Module base_model
+
+This Module contains City Class
+"""
+
 from models.base_model import BaseModel
 
 
 class City(BaseModel):
-    """Create a city.
+    """A class that city
 
     Attributes:
-        state_id (str): The state id.
-        name (str): The name of city.
+        name (str): name of city
+        state_id (str): state id
     """
 
     state_id = ""

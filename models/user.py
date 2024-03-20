@@ -1,16 +1,20 @@
 #!/usr/bin/python3
-"""Defines the User class."""
+"""Module base_model
+
+The Module User Class
+"""
+
 from models.base_model import BaseModel
 
 
 class User(BaseModel):
-    """set class that inherits from BaseModel.
+    """A class for user.
 
-     Attributes:
-        email (str): email of the user.
-        password (str): password of the user.
-        first_name (str): first name of the user.
-        last_name (str): last name of the user.
+    Attributes:
+        email (str): The emai
+        password (str): The password
+        first_name (str): The first name
+        last_name (str): The last name
     """
 
     email = ""
